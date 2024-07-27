@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    let changeMe;
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    
+    document.querySelector('#start').addEventListener('click',function(){
+        changeMe = setTimeout(changeText, 2000)
+        console.log("STARTED")
+    });
+
+    document.querySelector('#stop').addEventListener('click',function(){
+       clearTimeout(changeMe)
+       console.log("STOPPED")
+    });
+
+    
+    // const intervalId = setInterval(sayDate, 1000, "hi")
+    // clearInterval(intervalId)
+</script>
+</html>
